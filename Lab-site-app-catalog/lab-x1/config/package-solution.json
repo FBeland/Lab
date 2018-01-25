@@ -1,0 +1,11 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "lab-x1",
+    "id": "af8f2d76-d03e-4105-9459-5fe506bd316c",
+    "version": "2.0.1.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/lab-x1.sppkg"
+  }
+}

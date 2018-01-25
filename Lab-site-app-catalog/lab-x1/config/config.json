@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/aboutLabx/AboutLabxWebPart.js",
+      "manifest": "./src/webparts/aboutLabx/AboutLabxWebPart.manifest.json",
+      "outputPath": "./dist/about-labx-web-part.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "AboutLabxWebPartStrings": "webparts/aboutLabx/loc/{locale}.js"
+  }
+}
