@@ -24,6 +24,13 @@ function Add-SiteColAppCatalog($siteUrl) {
     Disconnect-SPOService
 }
 
+function Remove-SiteColAppCatalog($siteUrl) {
+    $adminUrl = "https://x13-admin.sharepoint.com"
+    Connect-SPOService -Url $adminUrl
+    Remove-SPOSiteCollectionAppCatalog -Site $siteUrl
+    Disconnect-SPOService
+}
+
 function Build-Dev() {
     Push-Location .\lab-x1
     Write-Host " npm install " -BackgroundColor Cyan -ForegroundColor Black
@@ -98,3 +105,4 @@ Build-Dev
 #Build-Ship
 #Add-App -url "https://x13.sharepoint.com/sites/Lab-decembre-x12"
 #Install-App -url "https://x13.sharepoint.com/sites/Lab-decembre-x12"
+#Remove-SiteColAppCatalog -siteUrl "https://x13.sharepoint.com/sites/Lab-decembre-x12"
