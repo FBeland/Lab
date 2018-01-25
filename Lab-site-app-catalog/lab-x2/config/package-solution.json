@@ -1,0 +1,12 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "lab-x2",
+    "id": "9b7be288-7946-4dea-9ed2-2809a6eeccb3",
+    "version": "1.0.2.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/lab-x2.sppkg"
+  }
+}

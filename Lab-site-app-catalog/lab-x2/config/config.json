@@ -1,0 +1,18 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "asset-in-package-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/assetInPackage/AssetInPackageWebPart.js",
+          "manifest": "./src/webparts/assetInPackage/AssetInPackageWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "AssetInPackageWebPartStrings": "lib/webparts/assetInPackage/loc/{locale}.js"
+  }
+}
