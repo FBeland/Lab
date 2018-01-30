@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.4.0",
+    "libraryName": "soleil-vert",
+    "libraryId": "fc10d1f7-47f9-437b-b6b4-9a907e8c7bd7",
+    "environment": "spo"
+  }
+}

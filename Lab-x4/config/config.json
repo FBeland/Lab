@@ -1,0 +1,18 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "soleil-vert-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/soleilVert/SoleilVertWebPart.js",
+          "manifest": "./src/webparts/soleilVert/SoleilVertWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SoleilVertWebPartStrings": "lib/webparts/soleilVert/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "soleil-vert-client-side-solution",
+    "id": "fc10d1f7-47f9-437b-b6b4-9a907e8c7bd7",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/soleil-vert.sppkg"
+  }
+}
