@@ -9,6 +9,7 @@ import {
 
 import * as strings from 'SoleilVertWebPartStrings';
 import SoleilVert from './components/SoleilVert';
+import Board from './components/Board';
 import { ISoleilVertProps } from './components/ISoleilVertProps';
 
 export interface ISoleilVertWebPartProps {
@@ -18,8 +19,8 @@ export interface ISoleilVertWebPartProps {
 export default class SoleilVertWebPart extends BaseClientSideWebPart<ISoleilVertWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<ISoleilVertProps > = React.createElement(
-      SoleilVert,
+    const element: React.ReactElement<ISoleilVertProps> = React.createElement(
+      Board,
       {
         description: this.properties.description
       }
