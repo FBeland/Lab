@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styles from './SoleilVert.module.scss';
-import { ISoleilVertProps, ISoleilVertState } from './ISoleilVertProps';
+import { IBoardProps, IBoardState } from './ISoleilVertProps';
 import { ISquareProps } from './ISquareProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 
@@ -21,44 +21,30 @@ const Square = ({ value, onClick }) => {
   );
 };
 
-export default class Board extends React.Component<ISoleilVertProps, ISoleilVertState> {
+export default class Board extends React.Component<IBoardProps, IBoardState> {
   constructor(props) {
     super(props);
+    /*
     this.state = {
       squares: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
       xIsNext: true,
-    } as ISoleilVertState;
+    } as IBoardState;
+    */
   }
 
   public renderSquare(i: number): JSX.Element {
     console.log("renderSquare");
-    console.log(this.state.squares[i]);
+    console.log(this.props.squares[i]);
     return (
       <Square
-        value={this.state.squares[i]}
-        onClick={() => this.handleClick(i)} />
+        value={this.props.squares[i]}
+        onClick={() => this.props.onclick(i)} />
     );
   }
 
-  public handleClick(i) {
-    console.log("handleClick");
-    const squares = this.state.squares.slice();
-    squares[i] = this.state.xIsNext ? "X" : "O";
-    const toggleNext = !this.state.xIsNext;
-    this.setState(x => ({ ...x, squares: squares, xIsNext: toggleNext, }));
-  }
-
-  public render(): React.ReactElement<ISoleilVertProps> {
-    const winner = this.calculateWinner(this.state.squares);
-    const player = this.state.xIsNext ? "X" : "O";
-    let status = `Next player: ${player}`
-    if (winner) {
-      status = `Winner: ${winner}`;
-    }
-
+  public render(): React.ReactElement<IBoardProps> {
     return (
       <div>
-        <div className="status">{status}</div>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}

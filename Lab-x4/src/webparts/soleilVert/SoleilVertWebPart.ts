@@ -8,9 +8,10 @@ import {
 } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'SoleilVertWebPartStrings';
-import SoleilVert from './components/SoleilVert';
+import Game from './components/Game';
+import { IGameProp } from './components/Game';
 import Board from './components/Board';
-import { ISoleilVertProps } from './components/ISoleilVertProps';
+import { IBoardProps } from './components/ISoleilVertProps';
 
 export interface ISoleilVertWebPartProps {
   description: string;
@@ -19,10 +20,10 @@ export interface ISoleilVertWebPartProps {
 export default class SoleilVertWebPart extends BaseClientSideWebPart<ISoleilVertWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<ISoleilVertProps> = React.createElement(
-      Board,
+    const element: React.ReactElement<IGameProp> = React.createElement(
+      Game,
       {
-        description: this.properties.description
+        ok: true,
       }
     );
 
